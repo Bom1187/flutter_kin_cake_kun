@@ -12,23 +12,22 @@ class SplashScreenUi extends StatefulWidget {
 
 class _SplashScreenUiState extends State<SplashScreenUi> {
   @override
-    void initState() {
+  void initState() {
     // หน่วงเวลา เมื่อครบกำหนดให้เปิดหน้าจอ HomeUI แบบย้อนกไม่ได้
     Future.delayed(
       // ระยะเวลาที่หน่วง
       Duration(seconds: 3),
       () {
         Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => CakeShopListUi(),
-          )
-        );
+            context,
+            MaterialPageRoute(
+              builder: (context) => CakeShopListUi(),
+            ));
       },
     );
     super.initState();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
